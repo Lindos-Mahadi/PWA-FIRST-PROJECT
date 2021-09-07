@@ -20,8 +20,8 @@ this.addEventListener("install", (event) =>{
 })
 
 this.addEventListener("fetch",(event)=>{
-    // if(!navigator.online)
-    // {
+    if(!navigator.online)
+    {
         event.respondWith(
             caches.match(event.request).then((result) =>{
                 if(result)
@@ -30,6 +30,6 @@ this.addEventListener("fetch",(event)=>{
                 }
             })
         )
-    // }
+    }
     
 })
