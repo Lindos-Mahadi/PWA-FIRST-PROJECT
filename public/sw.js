@@ -28,6 +28,8 @@ this.addEventListener("fetch",(event)=>{
                 {
                     return result
                 }
+                let requestUrl= event.request.clone();
+                fetch(requestUrl)
             })
         )
     }
